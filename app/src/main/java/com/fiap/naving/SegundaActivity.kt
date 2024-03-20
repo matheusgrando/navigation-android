@@ -12,11 +12,11 @@ class SegundaActivity : ComponentActivity() {
         setContentView(R.layout.segunda)
 
         var button = findViewById<Button>(R.id.button_two)
+        val stringRecebida = intent.getStringExtra("chaveString")
+        button.text = stringRecebida
 
         button.setOnClickListener { view : View? ->
-
-            var navegarDeVolta = Intent( this, MainActivity::class.java)
-            startActivity(navegarDeVolta)
+            finish()
         }
     }
 }

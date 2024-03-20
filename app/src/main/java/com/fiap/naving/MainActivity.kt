@@ -19,8 +19,11 @@ class MainActivity : ComponentActivity() {
         var buttonNav = findViewById<Button>(R.id.button)
 
         buttonNav.setOnClickListener { view : View? ->
-            var navegar = Intent(this,  SegundaActivity::class.java)
+            var navegar = Intent(this,  SegundaActivity::class.java).apply {
+                putExtra("chaveString", "Banana")
+            }
             startActivity(navegar)
+
         }
 
     }
